@@ -1,0 +1,39 @@
+Q1. What is hook?
+      Hooks:
+      Hooking setup between the memory of the JS and JSX Element
+      when a memory of JS changes( Hook memory value ), JSX automatically re-renders
+
+1.  useState:
+      State Hook:
+      holds a value which will change during events/interactions
+      a change in the value will cause re-render and update the value in the client-side html
+      dispatch function to change the value of state variable is async in nature
+
+      ** Do Not Try to access the updated value immediately after State Dispatch **
+      useState --> helps in re-rendering whenever any changes in the state happens.
+      useState --> Help creating state variable
+
+2.  Life Cycle Hook - useEffect
+      We are going to target each of the phases and we are going to do something on those phases( Mounting, Updating, Unmounting )
+
+3.  Context:
+      context for the entire application is mostly used which means the entire application will re-render
+      ** context is to avoid only the props drilling, but the entire application will re-render again & again incase of change in context value **
+      ** Context should also be separated specific to the particular levels to avoid re-rendering of the entire application **
+      useContext used to avoid props drilling but not the re-rendering
+
+4.  ref in react
+      useRef() --> to store a value which changes but not used in the rendering , hook used to access the DOM element
+      ref.current === e.target ( very similar ) , e.target can be only on actionable elements (button, form)
+      **ref.current/e.target cannot be used to change/alter the contents of the DOM / DOM**
+      should be used only for actions on the DOM Elements of application,
+
+      1. Scrolling ,  2. Sliding ,  3. Play an audio , 4. Stop an audio , 5. Resetting a form 
+   ** Ref should not be used to alter the DOM, it should only be used to do actions like above **
+      key, ref both the cannot be used as a prop name for a component,
+      because they used by VDOM to identify/capture a VDOM element
+  
+ 5.  useReducer
+      **reducer** is single function which can do multiple things/change the values based a set of instructions
+      Handling Multiple different state values with single function
+      Advanced version of useState: it can be used when we change the same state with more than three actions
